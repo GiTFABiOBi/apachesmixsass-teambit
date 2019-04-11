@@ -1,0 +1,273 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+}
+
+header {
+  width: 100vw;
+}
+
+header .container {
+  display: flex;
+  border-bottom: 1px solid #606060;
+  justify-content: space-between;
+  padding: 20px 0;
+  max-width: 1100px;
+  margin: auto;
+}
+
+header .container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+header .container a .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 103px;
+}
+
+header .container a .logo img {
+  height: 27px;
+}
+
+header .container span {
+  color: #58402c;
+  font-size: 20px;
+}
+
+header .container nav {
+  display: flex;
+  align-items: center;
+}
+
+header .container nav div > a {
+  text-decoration: none;
+  margin-left: 40px;
+  color: #58402c;
+  font-size: 14px;
+}
+
+header .container nav div > a:hover {
+  color: darkblue;
+}
+
+header .container nav div > a i.fa-chevron-down {
+  height: 18px;
+  line-height: 20px;
+  margin-left: 6px;
+}
+
+header .container nav div.loGoogle {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  border: 1px solid darkblue;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+header .container nav div.loGoogle:hover {
+  background: #30488f;
+}
+
+header .container nav div.loGoogle:hover a {
+  color: #fff;
+}
+
+header .container nav div.loGoogle a {
+  margin-left: 5px;
+}
+
+header .container nav .loGoogle > img {
+  height: 15px;
+}
+
+#logIn {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logIn .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 0;
+  max-width: 1100px;
+  margin: auto;
+}
+
+#logIn .container .sx {
+  width: 45%;
+}
+
+#logIn .container .sx h1 {
+  font-size: 50px;
+  font-weight: 500;
+  width: 100%;
+  color: #58402c;
+}
+
+#logIn .container .sx h3 {
+  margin: 50px 0;
+  font-size: 22px;
+  font-weight: 500;
+  color: #58402c;
+}
+
+#logIn .container .sx .sign-up {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#logIn .container .sx .sign-up a {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background: #30488f;
+  border-radius: 6px;
+  padding: 5px 20px;
+  color: #fff;
+}
+
+#logIn .container .sx .sign-up a:hover {
+  background: #283593;
+}
+
+#logIn .container .sx .sign-up .goog > a > img {
+  height: 20px;
+}
+
+#logIn .container .sx .sign-up span {
+  color: #cecece;
+}
+
+#logIn .container .sx .sign-up .slac > a > img {
+  height: 20px;
+}
+
+#logIn .container .sx > a {
+  display: block;
+  text-decoration: none;
+  margin: 20px 0;
+  color: #000;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+#logIn .container .sx > a:hover {
+  color: darkblue;
+}
+
+#logIn .container .dx {
+  width: 54%;
+}
+
+#logIn .container .dx img {
+  max-width: 100%;
+}
+
+#howW {
+  width: 100vw;
+  background: #ffe7d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#howW .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+}
+
+#howW .container p {
+  margin: 50px auto;
+  font-size: 30px;
+  color: #58402c;
+  width: 55%;
+  text-align: center;
+}
+
+#howW .container .mini-sections {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 50px 0;
+  width: 100%;
+}
+
+#howW .container .mini-sections .box {
+  width: 220px;
+}
+
+#howW .container .mini-sections .box img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-bottom: -40px;
+}
+
+#howW .container .mini-sections .box p {
+  text-align: center;
+  color: #58402c;
+  font-weight: 500;
+  font-size: 20px;
+  width: 100%;
+}
+
+#howW .container .last-img {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+#howW .container .last-img img {
+  max-width: 100%;
+}
+
+#howW .container hr {
+  width: 100%;
+  border: 0.5px solid #bdb5af;
+}
+
+@media screen and (max-width: 992px) {
+  header#header  .container {
+    padding: 20px;
+  }
+
+  #logIn {
+    padding: 20px;
+  }
+
+  #logIn .container {
+    flex-direction: column;
+  }
+
+  #logIn .container .sx {
+    width: 90%;
+    text-align: center;
+  }
+
+  #logIn .container .sx .sign-up {
+    width: 50%;
+    margin: auto;
+  }
+
+  #logIn .container .dx {
+    width: 90%;
+    text-align: center;
+  }
+}
+

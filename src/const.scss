@@ -1,0 +1,22 @@
+@mixin flexyCenter {
+  display: flex;
+}
+
+$JustifyC : center;
+$JustifyB : space-between;
+$JustifyA : space-around;
+$AlignC : center;
+
+$marrone : #58402c;
+$color2 : #cec923;
+$sizeS : 10px;
+$sizeM : 20px;
+$sizeL : 30px;
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', sans-serif;
+}

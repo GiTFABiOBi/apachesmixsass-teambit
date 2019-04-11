@@ -1,0 +1,78 @@
+header {
+
+  width: 100vw;
+  .container {
+    @include flexyCenter;
+    border-bottom: 1px solid #606060;
+    justify-content: $JustifyB;
+    padding: 20px 0;
+    max-width: 1100px;
+    margin: auto;
+
+    a {
+      display: flex;
+      align-items: $AlignC;
+      text-decoration: none;
+
+      .logo {
+        @include flexyCenter;
+        justify-content: $JustifyB;
+        align-items: $AlignC;
+        width: 103px;
+
+        img {
+          height: 27px;
+        }
+      }
+    }
+
+    span {
+      color: $marrone;
+      font-size: $sizeM;
+    }
+
+    nav {
+      @include flexyCenter;
+      align-items: $AlignC;
+
+      div > a {
+        text-decoration: none;
+        margin-left: 40px;
+        color: $marrone;
+        font-size: 14px;
+        &:hover {
+          color: darkblue;
+        }
+
+        i.fa-chevron-down {
+          height: 18px;
+          line-height: 20px;
+          margin-left: 6px;
+        }
+      }
+
+      div.loGoogle {
+        @include flexyCenter;
+        align-items: $AlignC;
+        margin-left: 40px;
+        border: 1px solid darkblue;
+        border-radius: 4px;
+        padding: 10px;
+        &:hover {
+          background: #30488f;
+          a {
+            color: #fff;
+          }
+        }
+
+        a {
+          margin-left: 5px;
+        }
+      }
+
+      .loGoogle > img {
+        height: 15px;
+      }
+    }
+  }
+}
