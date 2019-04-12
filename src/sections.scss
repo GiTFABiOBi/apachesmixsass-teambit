@@ -1,11 +1,15 @@
 #logIn {
 
-  width: 100vw;
+  width: $fullWidth;
   @include flexyCenter;
   justify-content: $JustifyB;
   align-items: $AlignC;
-  .container {
 
+  @media screen and (max-width: 992px) {
+    padding: 20px;
+  }
+
+  .container {
     @include flexyCenter;
     justify-content: $JustifyB;
     align-items: $AlignC;
@@ -13,13 +17,22 @@
     max-width: 1100px;
     margin: auto;
 
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+
     .sx {
       width: 45%;
+
+      @media screen and (max-width: 992px) {
+        width: 90%;
+        text-align: center;
+      }
 
       h1 {
         font-size : 50px;
         font-weight: 500;
-        width: 100%;
+        width: $inheritFW;
         color: $marrone;
       }
 
@@ -35,6 +48,16 @@
         @include flexyCenter;
         justify-content: $JustifyB;
 
+        @media screen and (max-width: 992px) {
+          width: 100%;
+          flex-direction: column;
+        }
+
+        .goog, .slac {
+          @media screen and (max-width: 992px) {
+            width: 100%;
+          }
+
         a {
           font-size: 12px;
           @include flexyCenter;
@@ -47,26 +70,35 @@
           &:hover {
             background: #283593;
           }
+
+          @media screen and (max-width: 992px) {
+            @include flexyCenter;
+            justify-content: $JustifyC;
+            align-items: $JustifyC;
+            }
+          }
+
+           > a > img {
+            height: 20px;
+          }
+
+          > a > img {
+            height: 20px;
+          }
         }
 
-        .goog > a > img {
-          height: 20px;
-        }
-
-        span {
-          color: #cecece;
-        }
-
-        .slac > a > img {
-          height: 20px;
-        }
+        > span {
+          @media screen and (max-width: 992px) {
+            margin: 10px 0;
+          }
       }
 
+      }
       > a {
         display: block;
         text-decoration: none;
         margin: 20px 0;
-        color: #000;
+        color: #555;
         font-weight: 500;
         font-size: 13px;
         &:hover {
@@ -74,21 +106,23 @@
         }
       }
     }
-
-
-
     .dx {
       width: 54%;
 
+      @media screen and (max-width: 992px) {
+        width: 90%;
+        text-align: center;
+      }
+
       img {
-        max-width: 100%;
+        max-width: $inheritFW;
       }
     }
   }
 }
 
 #howW {
-  width: 100vw;
+  width: $fullWidth;
   background: #ffe7d2;
   @include flexyCenter;
   justify-content: $JustifyC;
@@ -113,7 +147,7 @@
       align-items: $AlignC;
       justify-content: $JustifyA;
       margin: 50px 0;
-      width: 100%;
+      width: $inheritFW;
 
       .box {
         width: 220px;
@@ -130,7 +164,7 @@
           color: $marrone;
           font-weight: 500;
           font-size: $sizeM;
-          width: 100%;
+          width: $inheritFW;
         }
       }
     }
@@ -141,13 +175,287 @@
       text-align: center;
 
       img {
-        max-width: 100%;
+        max-width: $inheritFW;
       }
     }
 
     hr {
-      width: 100%;
+      width: $inheritFW;
       border: .5px solid #bdb5af;
+    }
+  }
+}
+
+#learn {
+  width: $fullWidth;
+
+  .row {
+    width: $inheritFW;
+
+      .box-sx {
+        padding: 0 40px;
+      }
+
+    .container {
+      @include flexyCenter;
+      align-items: $AlignC;
+      padding: 50px 0;
+      margin-left: 50px;
+      width: 100%;
+
+      @media screen and (max-width: 992px) {
+        flex-direction: column;
+        margin-left: 0;
+      }
+
+      .imagine {
+        @media screen and (max-width: 992px) {
+          margin-bottom: -40px;
+        }
+
+        img {
+          max-width: $inheritFW;
+        }
+      }
+
+      .data {
+        width: 30%;
+        color: $marrone;
+        padding-top: 30px;
+
+        @media screen and (max-width: 992px) {
+          width: $inheritFW;
+          @include flexyCenter;
+          align-items: $JustifyC;
+          text-align: center;
+          flex-direction: column;
+        }
+
+        .box-sx, .box-dx {
+          @media screen and (max-width: 992px) {
+            width: 100%;
+          }
+        }
+
+        h2 {
+          font-size: $sizeL;
+          font-weight: 500;
+        }
+
+        p, a {
+          margin: 40px 0;
+
+          @media screen and (max-width: 992px) {
+            margin: 20px 0;
+          }
+        }
+
+        p {
+          font-size: $sizeM;
+        }
+
+        a {
+          display: block;
+          text-decoration: none;
+          color: $Link;
+          font-size: 25px;
+
+            &:hover {
+
+              color: darken($Link, 20%);
+            }
+        }
+
+        .image {
+          width: $inheritFW;
+
+          img {
+            max-width: $inheritFW;
+
+            @media screen and (max-width: 992px) {
+              max-width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .row:nth-child(even) .container {
+    justify-content: flex-end;
+    margin-left: 0;
+
+    @media screen and (max-width: 992px) {
+      width: $inheritFW;
+      @include flexyCenter;
+      justify-content: $JustifyC;
+      align-items: $JustifyC;
+      text-align: center;
+
+      .data {
+        order: 2;
+      }
+
+      .imagine {
+        order: 1;
+
+        @media screen and (max-width: 992px) {
+          margin-bottom: -40px;
+        }
+      }
+    }
+  }
+}
+
+#started {
+  width: $fullWidth;
+  background: #ffe7d2;
+
+  .row {
+    width: $inheritFW;
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: $marrone;
+      padding: 50px 0;
+
+      h2 {
+        font-size: 55px;
+        display: inline-block;
+        font-weight: 500;
+
+        img {
+          vertical-align: -5px;
+          padding-left: 10px;
+        }
+      }
+
+
+      .box-text {
+        padding: 30px;
+        border: 1px solid #cecece;
+        background: #fff;
+        border-radius: 10px;
+        margin: 30px auto;
+        width: 85%;
+        position: relative;
+
+        > i {
+          position: absolute;
+          color: #0d47a1;
+          top: -25px;
+          left: 0;
+        }
+
+        p {
+          font-size: $sizeM;
+        }
+
+        .box-CoFounders {
+          @include flexyCenter;
+          align-items: $JustifyC;
+          margin: 30px 0;
+
+          .box-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid $marrone;
+            overflow: hidden;
+
+            img {
+              max-width: 100%;
+            }
+          }
+
+          .box-circle:nth-child(2) {
+            margin: 0 10px;
+          }
+        }
+      }
+
+      .sign-up {
+        width: 60%;
+        margin: auto;
+        @include flexyCenter;
+        justify-content: $JustifyB;
+        align-items: $AlignC;
+
+        @media screen and (max-width: 992px) {
+          width: 85%;
+          flex-direction: column;
+        }
+
+        .goog, .slac {
+          @media screen and (max-width: 992px) {
+            width: 100%;
+          }
+
+          a {
+            @media screen and (max-width: 992px) {
+              @include flexyCenter;
+              justify-content: $JustifyC;
+              align-items: $JustifyC;
+            }
+          }
+        }
+
+        > span {
+            @media screen and (max-width: 992px) {
+              margin: 15px 0;
+            }
+          }
+
+        a {
+          font-size: $sizeM;
+          @include flexyCenter;
+          align-items: $AlignC;
+          text-decoration: none;
+          background: #30488f;
+          border-radius: 6px;
+          padding: 10px 30px;
+          color: #fff;
+          &:hover {
+            background: #283593;
+          }
+
+          @media screen and (max-width: 992px) {
+            padding: 5px 15px;
+            font-size: 14px;
+          }
+        }
+
+        .goog > a > img {
+          height: 20px;
+        }
+
+        > span {
+          color: #cecece;
+        }
+
+        .slac > a > img {
+          height: 20px;
+        }
+      }
+
+      > a {
+        display: block;
+        text-decoration: none;
+        margin: 20px 0;
+        color: #555;
+        font-weight: 500;
+        font-size: 18px;
+        &:hover {
+          color: darkblue;
+        }
+
+        i {
+          height: 16px;
+          vertical-align: -1px;
+        }
+      }
     }
   }
 }

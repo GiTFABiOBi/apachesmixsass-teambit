@@ -5,8 +5,14 @@
     <title></title>
     <!-- CSS: FONTAWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- CSS: GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css?family=Barlow:100,500,800" rel="stylesheet">
+    <!-- CSS: JQUERY -->
     <link rel="stylesheet" href="dist/css/style.css">
+    <!-- JS: JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- JS: MY SCRIPT -->
+    <script src="script.js" charset="utf-8"></script>
   </head>
   <body>
     <header id="header">
@@ -17,7 +23,39 @@
             <span>Teambit</span>
           </div>
         </a>
-        <nav>
+        <!-- mobile menu -->
+        <i class="fas fa-bars fa-2x"></i>
+        <div class="container-mobile">
+          <nav id="mobile">
+            <div class="link">
+              <a href="#">Feedback</a>
+            </div>
+            <div class="link">
+              <a href="#">Surveys</a>
+            </div>
+            <div class="link">
+              <a href="#">Reviews</a>
+            </div>
+            <div class="link">
+              <a href="#">Praise</a>
+            </div>
+            <div class="link">
+              <a href="#">Pricing</a>
+            </div>
+            <div class="link">
+              <a href="#">Blog</a>
+            </div>
+            <div class="link">
+              <a href="#">Sign in</a>
+            </div>
+            <div class="link loGoogle">
+              <img src="imgs/gooLog.png" alt="logo google">
+              <a href="#">Sign up</a>
+            </div>
+          </nav>
+        </div>
+        <!-- desktop menu -->
+        <nav id="desktop">
           <div class="link">
             <a href="#">Solution<i class="fas fa-chevron-down"></i></a>
           </div>
@@ -59,7 +97,7 @@
               </a>
             </div>
           </div>
-          <a href="#">or use your email address &nbsp; &gt;</a>
+          <a href="#">or use your email address &nbsp; <i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
         <!-- immagine -->
         <div class="dx">
@@ -114,6 +152,133 @@
         </div>
         <div class="last-img">
           <img src="imgs/coniglio.png" alt="">
+        </div>
+      </div>
+    </section>
+    <!-- SEZIONE Learn More -->
+    <section id="learn">
+      <!-- first row -->
+      <div class="row">
+        <div class="container">
+          <div class="imagine">
+            <img src="imgs/feedback.png" alt="">
+          </div>
+          <div class="data">
+            <div class="box-sx">
+              <h2>Feedback to help teammates improve</h2>
+              <p>Empower your teammates to know in real time what they are doing well and what they need to improve.</p>
+              <a href="#">Learn More &nbsp; <i class="fas fa-long-arrow-alt-right"></i></a>
+            </div>
+            <div class="box-dx">
+              <div class="image">
+                <img src="imgs/img-feedback.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- second row -->
+      <div class="row">
+        <div class="container">
+          <div class="data">
+            <div class="box-sx">
+              <h2>Feedback to help teammates improve</h2>
+              <p>Empower your teammates to know in real time what they are doing well and what they need to improve.</p>
+              <a href="#">Learn More &nbsp; <i class="fas fa-long-arrow-alt-right"></i></a>
+            </div>
+            <div class="box-dx">
+              <div class="image">
+                <img src="imgs/img-survey.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="imagine">
+            <img src="imgs/survey.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- third row -->
+      <div class="row">
+        <div class="container">
+          <div class="imagine">
+            <img src="imgs/reviews.png" alt="">
+          </div>
+          <div class="data">
+            <div class="box-sx">
+              <h2>Feedback to help teammates improve</h2>
+              <p>Empower your teammates to know in real time what they are doing well and what they need to improve.</p>
+              <a href="#">Learn More &nbsp; <i class="fas fa-long-arrow-alt-right"></i></a>
+            </div>
+            <div class="box-dx">
+              <div class="image">
+                <img src="imgs/img-reviews.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- fourth row -->
+      <div class="row">
+        <div class="container">
+          <div class="data">
+            <div class="box-sx">
+              <h2>Feedback to help teammates improve</h2>
+              <p>Empower your teammates to know in real time what they are doing well and what they need to improve.</p>
+              <a href="#">Learn More &nbsp; <i class="fas fa-long-arrow-alt-right"></i></a>
+            </div>
+            <div class="box-dx">
+              <div class="image">
+                <img src="imgs/img-praise.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="imagine">
+            <img src="imgs/praise.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SEZIONE Get Started -->
+    <section id="started">
+      <div class="row">
+        <div class="container">
+          <h2>See Teambit for yourself.<br> Get started in seconds<img src="imgs/emoji.png"></h2>
+          <div class="box-text">
+            <i class="fas fa-quote-left fa-3x"></i>
+            <p>We are experiencing what Gallup calls 'an employee engagement crisis'. Just one-third of people at work are engaged.<br><br>
+            To improve performance and engagement companies rely on the same principles as industrial-age factories. But all those annual performance reviews and hundred-question surveys don't work anymore. People want regular feedback. Leaders who don't embrace this change end up with misaligned, disengaged and dwindling team.<br><br>
+            We designed Teambit to change that. It empowers teams to make feedback a daily habit. Everybody knows what they are doing well and what they need to improve, leading to better performing, engaged and happier teams.<br><br>
+            We are on a mission to make worklife exciting. Come join us.</p>
+            <div class="box-CoFounders">
+              <div class="box-circle">
+                <img src="imgs/alex.jpg" alt="">
+              </div>
+              <div class="box-circle">
+                <img src="imgs/alex.jpg" alt="">
+              </div>
+              <div class="names">
+                <h4>Alex and Bohdan</h4>
+                <span>Co-Founders at Teambit</span>
+              </div>
+            </div>
+          </div>
+          <!-- sign up -->
+          <div class="sign-up">
+            <div class="goog">
+              <a href="#">
+                <img src="imgs/gooLog.png" alt="logo google" class="loGoogle">
+                <span>Sign ip with Google</span>
+              </a>
+            </div>
+            <span>or</span>
+            <div class="slac">
+              <a href="#">
+                <img src="imgs/slack.png" alt="logo google" class="loGoogle">
+                <span>Sign ip with Slack</span>
+              </a>
+            </div>
+          </div>
+          <a href="#">or use your email address &nbsp; <i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
       </div>
     </section>

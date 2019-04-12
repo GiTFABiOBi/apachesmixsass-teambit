@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,6 +16,25 @@ header .container {
   padding: 20px 0;
   max-width: 1100px;
   margin: auto;
+  position: relative;
+}
+
+@media screen and (max-width: 1100px) {
+  header .container {
+    padding: 20px;
+  }
+}
+
+header .container i {
+  /* icona menu hamburger */
+  display: none;
+  z-index: 5;
+}
+
+@media screen and (max-width: 768px) {
+  header .container i {
+    display: block;
+  }
 }
 
 header .container a {
@@ -42,9 +59,50 @@ header .container span {
   font-size: 20px;
 }
 
+header .container .container-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.5);
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header .container .container-mobile {
+    display: none;
+  }
+}
+
+header .container .container-mobile #mobile {
+  display: block;
+  width: 100vw;
+  height: 370px;
+  background: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  header .container .container-mobile #mobile {
+    padding: 20px;
+  }
+}
+
+header .container .container-mobile #mobile .link {
+  margin: 20px 0;
+  color: #58402c;
+}
+
 header .container nav {
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  header .container nav {
+    display: none;
+    z-index: 1;
+  }
 }
 
 header .container nav div > a {
@@ -56,6 +114,12 @@ header .container nav div > a {
 
 header .container nav div > a:hover {
   color: darkblue;
+}
+
+@media screen and (max-width: 768px) {
+  header .container nav div > a {
+    margin-left: 0;
+  }
 }
 
 header .container nav div > a i.fa-chevron-down {
@@ -81,6 +145,12 @@ header .container nav div.loGoogle:hover a {
   color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  header .container nav div.loGoogle {
+    margin-left: 0;
+  }
+}
+
 header .container nav div.loGoogle a {
   margin-left: 5px;
 }
@@ -96,6 +166,12 @@ header .container nav .loGoogle > img {
   align-items: center;
 }
 
+@media screen and (max-width: 992px) {
+  #logIn {
+    padding: 20px;
+  }
+}
+
 #logIn .container {
   display: flex;
   justify-content: space-between;
@@ -105,8 +181,21 @@ header .container nav .loGoogle > img {
   margin: auto;
 }
 
+@media screen and (max-width: 992px) {
+  #logIn .container {
+    flex-direction: column;
+  }
+}
+
 #logIn .container .sx {
   width: 45%;
+}
+
+@media screen and (max-width: 992px) {
+  #logIn .container .sx {
+    width: 90%;
+    text-align: center;
+  }
 }
 
 #logIn .container .sx h1 {
@@ -129,7 +218,22 @@ header .container nav .loGoogle > img {
   justify-content: space-between;
 }
 
-#logIn .container .sx .sign-up a {
+@media screen and (max-width: 992px) {
+  #logIn .container .sx .sign-up {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #logIn .container .sx .sign-up .goog,
+  #logIn .container .sx .sign-up .slac {
+    width: 100%;
+  }
+}
+
+#logIn .container .sx .sign-up .goog a,
+#logIn .container .sx .sign-up .slac a {
   font-size: 12px;
   display: flex;
   align-items: center;
@@ -140,27 +244,41 @@ header .container nav .loGoogle > img {
   color: #fff;
 }
 
-#logIn .container .sx .sign-up a:hover {
+#logIn .container .sx .sign-up .goog a:hover,
+#logIn .container .sx .sign-up .slac a:hover {
   background: #283593;
 }
 
-#logIn .container .sx .sign-up .goog > a > img {
-  height: 20px;
+@media screen and (max-width: 992px) {
+  #logIn .container .sx .sign-up .goog a,
+  #logIn .container .sx .sign-up .slac a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-#logIn .container .sx .sign-up span {
-  color: #cecece;
-}
-
+#logIn .container .sx .sign-up .goog > a > img,
 #logIn .container .sx .sign-up .slac > a > img {
   height: 20px;
+}
+
+#logIn .container .sx .sign-up .goog > a > img,
+#logIn .container .sx .sign-up .slac > a > img {
+  height: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  #logIn .container .sx .sign-up > span {
+    margin: 10px 0;
+  }
 }
 
 #logIn .container .sx > a {
   display: block;
   text-decoration: none;
   margin: 20px 0;
-  color: #000;
+  color: #555;
   font-weight: 500;
   font-size: 13px;
 }
@@ -171,6 +289,13 @@ header .container nav .loGoogle > img {
 
 #logIn .container .dx {
   width: 54%;
+}
+
+@media screen and (max-width: 992px) {
+  #logIn .container .dx {
+    width: 90%;
+    text-align: center;
+  }
 }
 
 #logIn .container .dx img {
@@ -242,32 +367,298 @@ header .container nav .loGoogle > img {
   border: 0.5px solid #bdb5af;
 }
 
+#learn {
+  width: 100vw;
+}
+
+#learn .row {
+  width: 100%;
+}
+
+#learn .row .box-sx {
+  padding: 0 40px;
+}
+
+#learn .row .container {
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+  margin-left: 50px;
+  width: 100%;
+}
+
 @media screen and (max-width: 992px) {
-  header#header  .container {
-    padding: 20px;
+  #learn .row .container {
+    flex-direction: column;
+    margin-left: 0;
   }
+}
 
-  #logIn {
-    padding: 20px;
+@media screen and (max-width: 992px) {
+  #learn .row .container .imagine {
+    margin-bottom: -40px;
   }
+}
 
-  #logIn .container {
+#learn .row .container .imagine img {
+  max-width: 100%;
+}
+
+#learn .row .container .data {
+  width: 30%;
+  color: #58402c;
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  #learn .row .container .data {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
     flex-direction: column;
   }
+}
 
-  #logIn .container .sx {
-    width: 90%;
+@media screen and (max-width: 992px) {
+  #learn .row .container .data .box-sx,
+  #learn .row .container .data .box-dx {
+    width: 100%;
+  }
+}
+
+#learn .row .container .data h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+#learn .row .container .data p,
+#learn .row .container .data a {
+  margin: 40px 0;
+}
+
+@media screen and (max-width: 992px) {
+  #learn .row .container .data p,
+  #learn .row .container .data a {
+    margin: 20px 0;
+  }
+}
+
+#learn .row .container .data p {
+  font-size: 20px;
+}
+
+#learn .row .container .data a {
+  display: block;
+  text-decoration: none;
+  color: #2a80a3;
+  font-size: 25px;
+}
+
+#learn .row .container .data a:hover {
+  color: #154052;
+}
+
+#learn .row .container .data .image {
+  width: 100%;
+}
+
+#learn .row .container .data .image img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  #learn .row .container .data .image img {
+    max-width: 80%;
+  }
+}
+
+#learn .row:nth-child(even) .container {
+  justify-content: flex-end;
+  margin-left: 0;
+}
+
+@media screen and (max-width: 992px) {
+  #learn .row:nth-child(even) .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
   }
 
-  #logIn .container .sx .sign-up {
-    width: 50%;
-    margin: auto;
+  #learn .row:nth-child(even) .container .data {
+    order: 2;
   }
 
-  #logIn .container .dx {
-    width: 90%;
-    text-align: center;
+  #learn .row:nth-child(even) .container .imagine {
+    order: 1;
   }
+}
+
+@media screen and (max-width: 992px) and (max-width: 992px) {
+  #learn .row:nth-child(even) .container .imagine {
+    margin-bottom: -40px;
+  }
+}
+
+#started {
+  width: 100vw;
+  background: #ffe7d2;
+}
+
+#started .row {
+  width: 100%;
+}
+
+#started .row .container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  color: #58402c;
+  padding: 50px 0;
+}
+
+#started .row .container h2 {
+  font-size: 55px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+#started .row .container h2 img {
+  vertical-align: -5px;
+  padding-left: 10px;
+}
+
+#started .row .container .box-text {
+  padding: 30px;
+  border: 1px solid #cecece;
+  background: #fff;
+  border-radius: 10px;
+  margin: 30px auto;
+  width: 85%;
+  position: relative;
+}
+
+#started .row .container .box-text > i {
+  position: absolute;
+  color: #0d47a1;
+  top: -25px;
+  left: 0;
+}
+
+#started .row .container .box-text p {
+  font-size: 20px;
+}
+
+#started .row .container .box-text .box-CoFounders {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+#started .row .container .box-text .box-CoFounders .box-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #58402c;
+  overflow: hidden;
+}
+
+#started .row .container .box-text .box-CoFounders .box-circle img {
+  max-width: 100%;
+}
+
+#started .row .container .box-text .box-CoFounders .box-circle:nth-child(2) {
+  margin: 0 10px;
+}
+
+#started .row .container .sign-up {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  #started .row .container .sign-up {
+    width: 85%;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #started .row .container .sign-up .goog,
+  #started .row .container .sign-up .slac {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #started .row .container .sign-up .goog a,
+  #started .row .container .sign-up .slac a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #started .row .container .sign-up > span {
+    margin: 15px 0;
+  }
+}
+
+#started .row .container .sign-up a {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background: #30488f;
+  border-radius: 6px;
+  padding: 10px 30px;
+  color: #fff;
+}
+
+#started .row .container .sign-up a:hover {
+  background: #283593;
+}
+
+@media screen and (max-width: 992px) {
+  #started .row .container .sign-up a {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
+}
+
+#started .row .container .sign-up .goog > a > img {
+  height: 20px;
+}
+
+#started .row .container .sign-up > span {
+  color: #cecece;
+}
+
+#started .row .container .sign-up .slac > a > img {
+  height: 20px;
+}
+
+#started .row .container > a {
+  display: block;
+  text-decoration: none;
+  margin: 20px 0;
+  color: #555;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#started .row .container > a:hover {
+  color: darkblue;
+}
+
+#started .row .container > a i {
+  height: 16px;
+  vertical-align: -1px;
 }
 
