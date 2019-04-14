@@ -1,6 +1,11 @@
 header {
 
   width: 100vw;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+
   .container {
     @include flexyCenter;
     border-bottom: 1px solid #606060;
@@ -21,6 +26,12 @@ header {
       @media screen and (max-width: 768px) {
         display: block;
       }
+    }
+
+    i.fa-times {
+      position: absolute;
+      right: 23px;
+      display: none;
     }
 
     a {
@@ -83,6 +94,27 @@ header {
         z-index: 1;
       }
 
+      .top-menu {
+        position: relative;
+        padding: 20px 0;
+
+        .sub-menu {
+          position: absolute;
+          top: 50px;
+          left: 11px;
+          background: #fff;
+          padding: 10px 20px;
+          border-radius: 4px;
+          box-shadow: 2px 2px 5px gray;
+          display: none;
+
+          a {
+            margin-left: 0;
+            padding: 4px 0;
+          }
+        }
+      }
+
       div > a {
         text-decoration: none;
         margin-left: 40px;
@@ -96,11 +128,16 @@ header {
           margin-left: 0;
         }
 
-        i.fa-chevron-down {
-          height: 18px;
-          line-height: 20px;
-          margin-left: 6px;
-        }
+      }
+
+      a:first-of-type {
+        display: inline-block;
+      }
+
+      i.fa-chevron-down {
+        display: inline-block;
+        vertical-align: bottom;
+        margin-left: 6px;
       }
 
       div.loGoogle {

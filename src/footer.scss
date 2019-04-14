@@ -1,0 +1,161 @@
+footer {
+  width: $inheritFW;
+  height: 500px;
+  @include flexyCenter;
+  align-items: center;
+  margin: 40px 0;
+
+  .box-footer {
+
+    @include flexyCenter;
+    justify-content: $JustifyC;
+    align-items: center;
+    padding: 80px 150px;
+
+    .logoText {
+      @include flexyCenter;
+      width: 30%;
+      margin-right: 5%;
+      align-self: flex-start;
+
+      img {
+        height: 50px;
+      }
+
+      p {
+        color: $marrone;
+        font-size: 19px;
+        padding-left: 10px;
+        font-weight: 500;
+        width: 80%;
+
+        a {
+          color: #30488F;
+          text-decoration: none;
+          &:hover {
+            color: darken(#30488F, 15%);
+            text-decoration: underline;
+          }
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        width: $inheritFW;
+        margin-bottom: 50px;
+        margin-right: 0;
+      }
+    } // END .logoText
+
+    .footerMenus {
+      @include flexyCenter;
+      justify-content: $JustifyB;
+      width: 65%;
+
+      .footerMenu {
+        width: 18%;
+        margin-left: 2%;
+
+        h3 {
+          color: $marrone;
+          margin-bottom: 20px;
+        }
+
+        a {
+          display: block;
+          text-decoration: none;
+          color: $marrone;
+          font-weight: 500;
+          margin-bottom: 15px;
+          font-size: 14px;
+
+        }
+
+        a {
+          &:hover {
+            color: darken(#30488F, 15%);
+            text-decoration: underline;
+          }
+        }
+
+        @media screen and (max-width: 992px) {
+          width: 50%;
+          margin-bottom: 40px;
+        }
+
+        @media screen and (max-width: 600px) {
+          width: 40%;
+        }
+
+      } // END .footerMenu
+
+      .footerMenu:last-of-type {
+
+        a {
+          width: 100px;
+        }
+
+        a:last-of-type {
+          position: relative;
+
+          i {
+            position: absolute;
+            bottom: 0;
+            right: -16px;
+          }
+        }
+
+        @media screen and (max-width: 992px) {
+          align-self: flex-start;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        width: $inheritFW;
+        flex-wrap: wrap;
+      }
+    } // END .footerMenus
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      width: $inheritFW;
+      padding: 0 10px;
+    }
+  }// END .box-footer
+
+  @media screen and (max-width: 992px) {
+    height: auto;
+  }
+}
+
+#question {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  .blue-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #30488f;
+    @include flexyCenter;
+    justify-content: $JustifyC;
+    align-items: $JustifyC;
+    color: #fff;
+    position: relative;
+
+    .red-circle {
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #d22628;
+      @include flexyCenter;
+      justify-content: $JustifyC;
+      align-items: $JustifyC;
+      font-size: 13px;
+      font-weight: 100;
+    }
+  }
+}
